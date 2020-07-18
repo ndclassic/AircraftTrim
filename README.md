@@ -13,6 +13,7 @@
 
 ### 3. Add the following to the top of your code and replace the 0s with your data:
 ```python
+import numpy as np
 import AircraftTrim
 
 derLon = np.array([[0, 0, 0],
@@ -23,7 +24,7 @@ where each element represents a longitudinal aerodynamic derivative:
 
 CD0 (zero drag coefficient) | CDal (drag due to AoA)  | CDet (drag due to elevator deflection)
 ------------ | ------------- | -------------
-**CL0 (zero lift coefficient)** | **CLal (lift due to AoA)**  | **CDet (lift due to elevator deflection)**
+**CL0 (zero lift coefficient)** | **CLal (lift due to AoA)**  | **CLet (lift due to elevator deflection)**
 **Cm0 (zero pitching moment coefficient)** | **Cmal (pitching moment due to AoA)**  | **Cmet (pitching moment due to elevator deflection)**
 
 further add
