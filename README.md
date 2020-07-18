@@ -63,3 +63,12 @@ solution = AircraftTrim.trim(aircraft, VA, rh, ga, g=9.80665, X0=np.array([0, 0,
 * Efficiency Indicator = VA / F (in s/kg)
 
 # Explanation
+* In straight, unaccelerated flight (no rolling angle), the aircraft either ascends, descends or stays level. As there is no sideways motion, the aircraft can be inspected from the side and a 2D-representation of external Forces drawn as shown below. The thin colored vectors represent the same force as their corresponding thick vectors, they are just expressed in the aerodynamic coordinate system. 
+![](vectors.png)
+* As the sum of all forces and moments must be zero for unaccelerated flight, three equilibrium equations can be stated. (see File [AircraftTrim.py](AircraftTrim.py) line 87 to 89)
+* Next, the Jacobian Matrix can be fomulated for the abovementioned three equations and the variables:
+    * Angle of Attack (alpha)
+    * elevator decflection (eta)
+    * Thrust (F)
+* Finally, the Trim algorith utilizes the multi-dimensional version of Newton's Method described in
+[Courtney Remani - "Numerical Methods for Solving Systems of Nonlinear Equations"](https://www.lakeheadu.ca/sites/default/files/uploads/77/docs/RemaniFinal.pdf) from Page 7 onwards.
